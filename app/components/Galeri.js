@@ -3,85 +3,13 @@
 import Image from "next/image"
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import galeriData from "../data/galeriData.json"
 
 export default function Galeri() {
   const [showAll, setShowAll] = useState(false)
   const [selectedImage, setSelectedImage] = useState(null)
 
-  const images = [
-    {
-      src: "/images/pkk.jpg?height=300&width=400",
-      alt: "Suasana Dusun Mendak",
-      title: "Pertemuan PKK",
-      description: "Kegiatan rutin PKK (Pemberdayaan Kesejahteraan Keluarga) yang dilaksanakan setiap bulan untuk meningkatkan keterampilan dan kesejahteraan ibu-ibu di Dusun Mendak"
-    },
-    {
-      src: "/images/posbindu.PNG?height=300&width=400",
-      alt: "Kegiatan Warga",
-      title: "Posbindu Dusun Mendak",
-      description: "Pos Pembinaan Terpadu (Posbindu) untuk memantau kesehatan warga, terutama lansia, dengan pemeriksaan rutin dan edukasi kesehatan"
-    },
-    {
-      src: "/images/ibungaji.jpg?height=300&width=400",
-      alt: "Fasilitas Umum",
-      title: "Pengajian Ibu-Ibu",
-      description: "Kegiatan pengajian rutin yang diselenggarakan untuk meningkatkan keimanan dan mempererat silaturahmi antar warga"
-    },
-    {
-      src: "/images/posyandu.jpg?height=300&width=400",
-      alt: "Kegiatan Anak-anak",
-      title: "Posyandu Balita",
-      description: "Pos Pelayanan Terpadu untuk memantau pertumbuhan dan kesehatan balita serta memberikan imunisasi dan vitamin"
-    },
-    {
-      src: "/images/pemuda.jpg?height=300&width=400",
-      alt: "Jalan Dusun",
-      title: "Rapat Kumpul Pemuda",
-      description: "Pertemuan rutin pemuda dusun untuk membahas program-program pembangunan dan kegiatan kemasyarakatan"
-    },
-    {
-      src: "/images/merapi2.jpg?height=300&width=400",
-      alt: "Pertanian",
-      title: "Pemandangan Gunung Merapi",
-      description: "Pemandangan indah Gunung Merapi yang terlihat dari Dusun Mendak, menjadi latar belakang kehidupan sehari-hari warga"
-    },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Kegiatan Gotong Royong",
-      title: "Gotong Royong Warga",
-      description: "Kegiatan gotong royong rutin yang dilakukan warga untuk menjaga kebersihan dan keindahan lingkungan dusun"
-    },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Rapat RT",
-      title: "Rapat RT Rutin",
-      description: "Rapat rutin RT untuk membahas program-program pembangunan dan menyelesaikan permasalahan warga"
-    },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Kegiatan Anak-anak",
-      title: "Kegiatan Anak-anak",
-      description: "Berbagai kegiatan untuk anak-anak seperti belajar bersama, bermain, dan pengembangan kreativitas"
-    },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Panen Cabai",
-      title: "Panen Cabai",
-      description: "Kegiatan panen cabai yang menjadi salah satu komoditas utama pertanian di Dusun Mendak"
-    },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Ternak Warga",
-      title: "Peternakan Warga",
-      description: "Kegiatan peternakan yang menjadi mata pencaharian sampingan warga Dusun Mendak"
-    },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Jalan Dusun",
-      title: "Jalan Utama Dusun",
-      description: "Jalan utama yang menghubungkan Dusun Mendak dengan desa-desa tetangga dan pusat kota"
-    }
-  ]
+  const images = galeriData.images
 
   const initialDisplayCount = 6
   const displayedImages = showAll ? images : images.slice(0, initialDisplayCount)
@@ -117,7 +45,7 @@ export default function Galeri() {
               <div className="relative overflow-hidden">
                 <Image
                   src={image.src || "/placeholder.svg"}
-                  alt={image.alt}
+                    alt={image.alt || "Galeri Image"}
                   width={400}
                   height={300}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"

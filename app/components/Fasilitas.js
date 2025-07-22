@@ -1,82 +1,29 @@
 "use client"
-import { School, Heart, Zap, Droplets, Car, Wifi, X, UserCog, Sprout } from "lucide-react"
+
+import { School, Combine, Heart, Zap, Droplets, Car, Wifi, X, UserCog, Sprout, Building2, OctagonAlert, ListCollapse } from "lucide-react"
 import { useState } from "react"
+import detail from "../data/detailData.json"
 
 export default function Fasilitas() {
   const [selectedFacility, setSelectedFacility] = useState(null)
 
-  const facilities = [
-    {
-      icon: <School className="w-12 h-12" />,
-      title: "Pendidikan",
-      details: {
-        subtitle: "Fasilitas Pendidikan di Dusun Mendak",
-        content: [
-          "PAUD (Pendidikan Anak Usia Dini) dengan tenaga pengajar terlatih",
-          "Taman Kanak-kanak yang memiliki fasilitas bermain yang lengkap",
-          "Akses mudah ke Sekolah Dasar terdekat hanya 2 km dari dusun",
-          "Program bimbingan belajar untuk anak-anak sekolah",
-          "Perpustakaan desa dengan koleksi buku yang terus bertambah"
-        ]
-      }
-    },
-    {
-      icon: <UserCog className="w-12 h-12" />,
-      title: "Struktur Demografi",
-      details: {
-        subtitle: "Detail Struktur Demografi",
-        content: [
-          "Jumlah KK yang ada : 63",
-          "Jumlah Jiwa : 184",
-          "Jumlah Lansia (50 Tahun > ) : 59",
-          "Jumlah Remaja (14-24 Tahun) : 41",
-          "Jumlah Anak-Anak : (3-13 Tahun) : 24"
-        ]
-      }
-    },
-    {
-      icon: <Droplets className="w-12 h-12" />,
-      title: "Air Bersih",
-      details: {
-        subtitle: "Sistem Penyediaan Air Bersih",
-        content: [
-          "Sumur tidak dapat ditemukan disini",
-          "PAM juga tidak sampai ke atas untuk aksesnya",
-          "Warga memanfaatkan air hujan dalam kebutuhan sehari-hari",
-          "Jika musim kemarau, warga harus membeli air bersih dari luar dengan tangki besar",
-          "Terdapat mata air kecil di sekitar dusun yang dapat digunakan warga"
-        ]
-      }
-    },
-    {
-      icon: <Sprout className="w-12 h-12" />,
-      title: "Potensi Dusun",
-      details: {
-        subtitle: "Hal-hal yang dapat dikembangkan di dusun",
-        content: [
-          "Warga banyak yang memiliki lahan pertanian",
-          "Hampir semua warga memiliki hewan ternak sebagai investasi",
-          "Meskipun ada yang tidak memiliki lahan, mereka tetap menanam di halaman rumah",
-          "Biasanya yang ditanam adalah cabai, timun, tembakau, dan sayuran lainnya. penanaman sesuai dengan musim",
-          "Lahan pertanian disini bukan sawah melainkan tegalan kering, sehingga tanaman yang ditanam adalah tanaman musiman"
-        ]
-      }
-    },
-    {
-      icon: <Wifi className="w-12 h-12" />,
-      title: "Internet",
-      details: {
-        subtitle: "Konektivitas Digital",
-        content: [
-          "Jaringan internet fiber optik yang tidak stabil",
-          "WiFi gratis di balai desa",
-          "Kartu yang ada sinyal (lumayan) : ByU, Telkomsel, Indosat",
-          "Banyak warga yang sudah memiliki WiFi sendiri",
-          "Sinyal sulit di dapatkan di beberapa titik dusun, terutama di area yang sudah diatas"
-        ]
-      }
-    },
-  ]
+  const facilities = detail.data
+
+  // Icon mapping untuk mengkonversi string ke komponen React
+  const iconMap = {
+    Building2: <Building2 className="w-12 h-12" />,
+    UserCog: <UserCog className="w-12 h-12" />,
+    Droplets: <Droplets className="w-12 h-12" />,
+    Sprout: <Sprout className="w-12 h-12" />,
+    Wifi: <Wifi className="w-12 h-12" />,
+    OctagonAlert: <OctagonAlert className="w-12 h-12" />,
+    ListCollapse: <ListCollapse className="w-12 h-12" />,
+    Combine : <Combine className="w-12 h-12" />,
+  }
+
+  const getIcon = (iconName) => {
+    return iconMap[iconName] || <Building2 className="w-12 h-12" />
+  }
 
   const openModal = (facility) => {
     setSelectedFacility(facility)
@@ -96,7 +43,7 @@ export default function Fasilitas() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8">
           {facilities.map((facility, index) => (
             <div
               key={index}
@@ -104,7 +51,9 @@ export default function Fasilitas() {
               onClick={() => openModal(facility)}
             >
               <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center group-hover:from-blue-500 group-hover:to-blue-700 transition-all duration-300">
-                <div className="text-white transform group-hover:scale-110 transition-transform duration-300">{facility.icon}</div>
+                <div className="text-white transform group-hover:scale-110 transition-transform duration-300">
+                  {getIcon(facility.icon)}
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">{facility.title}</h3>
@@ -123,7 +72,7 @@ export default function Fasilitas() {
           <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
               <div className="flex items-center space-x-4">
-                <div className="text-blue-600">{selectedFacility.icon}</div>
+                <div className="text-blue-600">{getIcon(selectedFacility.icon)}</div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-800">{selectedFacility.title}</h3>
                   <p className="text-gray-600">{selectedFacility.details.subtitle}</p>

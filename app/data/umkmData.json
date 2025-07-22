@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Nasi Goreng / Angkringan Mendak",
+      "category": "kuliner",
+      "description": "Angkringan dengan menu masakan tradisional Jawa dan berbagai menu yang lainnya",
+      "image": "/images/nasigoreng.JPG",
+      "specialties": ["Gudeg", "Soto Ayam", "Nasi Pecel"]
+    },
+    {
+      "id": 2,
+      "name": "Swalayan D'Mart",
+      "category": "retail",
+      "description": "Toko swalayan lengkap dengan berbagai kebutuhan sehari-hari warga dusun",
+      "image": "/images/demart.JPG",
+      "specialties": ["Sembako", "Alat Tulis", "Obat-obatan"]
+    },
+    {
+      "id": 3,
+      "name": "Batu Alam",
+      "category": "kerajinan",
+      "description": "Kerajinan tangan dari batu alam seperti bata rumah, pondasi, dan batu hias",
+      "image": "/images/placeholder.jpg",
+      "specialties": ["Batako", "Batu Alam", "Batu Hias"]
+    },
+    {
+      "id": 4,
+      "name": "Jasa Rental / Sewa Mobil",
+      "category": "jasa",
+      "description": "Rental mobil untuk kebutuhan transportasi warga dusun dan sekitarnya",
+      "image": "/images/sewa.JPG",
+      "specialties": ["Rental Mobil"]
+    },
+    {
+      "id": 5,
+      "name": "Jamu Tradisional",
+      "category": "kuliner",
+      "description": "UMKM jamu tradisional dengan berbagai ramuan herbal untuk kesehatan",
+      "image": "/images/jamu.JPG",
+      "specialties": ["Jamu"]
+    },
+    {
+      "id": 6,
+      "name": "Katering Makanan",
+      "category": "kuliner",
+      "description": "Katering makanan untuk acara-acara seperti pernikahan, khitanan, dan acara keluarga",
+      "image": "/images/placeholder.jpg",
+      "specialties": ["Nasi Tumpeng", "Kue Tradisional", "Snack Box"]
+    },
+    {
+      "id": 7,
+      "name": "Buah Pisang",
+      "category": "kuliner",
+      "description": "Buah pisang segar dari kebun masyarakat sekitar dengan berbagai jenis pisang",
+      "image": "/images/pisang.jpg",
+      "specialties": ["Pisang Ambon", "Pisang Kepok", "Pisang Raja"]
+    },
+    {
+      "id": 8,
+      "name": "Mie Ayam dan Gorengan",
+      "category": "kuliner",
+      "description": "Warung mie ayam dan gorengan dengan cita rasa khas dan harga terjangkau",
+      "image": "/images/mieayam.JPG",
+      "specialties": ["Mie Ayam", "Tahu Tempe", "Gorengan"]
+    }
+  ]
+}
+

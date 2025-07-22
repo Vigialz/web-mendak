@@ -8,6 +8,8 @@ import Galeri from "./components/Galeri"
 import Kontak from "./components/Kontak"
 import Footer from "./components/Footer"
 import Informasi from "./components/Informasi"
+import Carousel from "./components/Carousel"
+import Peta from "./components/Peta"
 
 export default function Home() {
   return (
@@ -16,10 +18,12 @@ export default function Home() {
       <Hero />
         {/*<Informasi />*/}
       <Stats />
-        <Fasilitas />
       <Umkm />
+      <Carousel />
+      <Fasilitas />
       {/*<VisiMisi />*/}
       <Galeri />
+      <Peta />
       <Kontak />
       <Footer />
     </div>

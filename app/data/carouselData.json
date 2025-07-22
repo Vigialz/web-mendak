@@ -1,0 +1,41 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "image": "/images/gardupandang.JPG",
+      "title": "Gardu Pandang Dusun Mendak",
+      "description": "Gardu stasiun radio untuk mengamati aktivitas gunung Merapi dan sekitarnya"
+    },
+    {
+      "id": 2,
+      "image": "/images/mataair.JPG",
+      "title": "Mata Air Alami",
+      "description": "Sumber mata air di dusun mendak yang sudah jarang digunakan warga karena akses yang sulit"
+    },
+    {
+      "id": 3,
+      "image": "/images/arca.JPG",
+      "title": "Situs Bersejarah Arca",
+      "description": "Peninggalan bersejarah yang menjadi saksi peradaban masa lampau"
+    },
+    {
+      "id": 4,
+      "image": "/images/makam.JPG",
+      "title": "Kompleks Pemakaman",
+      "description": "Area pemakaman untuk warga dusun mendak dan dusun narum lor"
+    },
+    {
+      "id": 5,
+      "image": "/images/gunung.JPG",
+      "title": "Pemandangan Gunung Merapi",
+      "description": "Pemandangan indah Gunung Merapi yang terlihat dari Dusun Mendak, menjadi latar belakang kehidupan sehari-hari warga"
+    },
+    {
+      "id": 6,
+      "image": "/images/tambangpasir.JPG",
+        "title": "Tambang Pasir",
+        "description": "Area tambang pasir yang dikelola warga untuk kebutuhan konstruksi"
+    }
+  ]
+}
+

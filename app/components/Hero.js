@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   useEffect(() => {
     setIsVisible(true)
@@ -26,7 +27,7 @@ export default function Hero() {
         {/* Background Animation */}
         <div className="absolute inset-0">
           <img
-              src="/images/merapi2.jpg"
+              src="/images/gunung.JPG"
               alt="Background"
               className="w-full h-full object-cover object-center opacity-80"
               draggable="false"
@@ -42,9 +43,9 @@ export default function Hero() {
             >
               <h1 className="text-4xl md:text-5xl mt-32 font-bold mb-6 leading-tight">Website Dusun Mendak</h1>
               <p className="text-xl mb-8 text-blue-100 leading-relaxed text-justify">
-                Dusun Mendak adalah sebuah dusun yang terletak di kaki Gunung Merapi dengan detail Kelurahan Tlogowatu, Kecamatan Kemalang, Kabupaten Klaten, Jawa Tengah dengan ketinggian permukaan 860 Mdpl. Dusun ini memiliki potensi dalam sektor <span className="font-semibold text-green-600">pertanian dan peternakan</span>. Dalam Dusun Mendak terdapat banyak lahan pertanian (tegal) terutama cabai dan tembakau. Selain itu semua warga mendak hampir memiliki ternak dan kebun pribadi untuk dikelola. Dengan jumlah penduduk sekitar 169 jiwa,
+                Dusun Mendak adalah sebuah dusun yang terletak di kaki Gunung Merapi dengan detail Kelurahan Tlogowatu, Kecamatan Kemalang, Kabupaten Klaten, Jawa Tengah dengan ketinggian permukaan 860 Mdpl. Dusun ini memiliki potensi dalam sektor <span className="font-semibold text-green-600">pertanian dan peternakan</span>. Dalam Dusun Mendak terdapat banyak lahan pertanian (tegal) terutama cabai dan tembakau. Selain itu semua warga mendak hampir memiliki ternak dan kebun pribadi untuk dikelola. Dengan jumlah penduduk sekitar 184 jiwa,
                 Dusun Mendak terdiri dari 1 RT dan
-                termasuk kedalam RW 3 di Kelurahan Tlogowatu.
+                termasuk kedalam RW 3 di Kelurahan Tlogowatu (Last Update Juli 2025)
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-32">
                 <button

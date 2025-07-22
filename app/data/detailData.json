@@ -1,0 +1,120 @@
+{
+  "data": [
+    {
+      "icon": "Building2",
+      "title": "Prasarana",
+      "details": {
+        "subtitle": "Beberapa Infrastruktur yang ada di Dusun Mendak",
+        "content": [
+          "Pos Ronda : 1",
+          "Mushola : 1",
+          "Lapangan Badminton : 1",
+          "Makam / Sasonoloyo : 1",
+          "Terdapat banyak lahan pertanian",
+          "Toko Swalayan : 1"
+        ]
+      }
+    },
+    {
+      "icon": "UserCog",
+      "title": "Struktur Demografi",
+      "details": {
+        "subtitle": "Detail Struktur Demografi",
+        "content": [
+          "Jumlah KK yang ada : 63",
+          "Jumlah Jiwa : 184",
+          "Jumlah Lansia (50 Tahun > ) : 59",
+          "Jumlah Remaja (14-24 Tahun) : 41",
+          "Jumlah Anak-Anak : (3-13 Tahun) : 24"
+        ]
+      }
+    },
+    {
+      "icon": "Droplets",
+      "title": "Air Bersih",
+      "details": {
+        "subtitle": "Sistem Penyediaan Air Bersih",
+        "content": [
+          "Sumur tidak dapat ditemukan disini",
+          "PAM juga tidak sampai ke atas untuk aksesnya",
+          "Warga memanfaatkan air hujan dalam kebutuhan sehari-hari",
+          "Jika musim kemarau, warga harus membeli air bersih dari luar dengan tangki besar",
+          "Terdapat mata air kecil di sekitar dusun yang dapat digunakan warga"
+        ]
+      }
+    },
+    {
+      "icon": "Sprout",
+      "title": "Potensi Dusun",
+      "details": {
+        "subtitle": "Hal-hal yang dapat dikembangkan di dusun",
+        "content": [
+          "Warga banyak yang memiliki lahan pertanian",
+          "Hampir semua warga memiliki hewan ternak sebagai investasi",
+          "Meskipun ada yang tidak memiliki lahan, mereka tetap menanam di halaman rumah",
+          "Biasanya yang ditanam adalah cabai, timun, tembakau, dan sayuran lainnya. penanaman sesuai dengan musim",
+          "Lahan pertanian disini bukan sawah melainkan tegalan kering, sehingga tanaman yang ditanam adalah tanaman musiman"
+        ]
+      }
+    },
+    {
+      "icon": "Wifi",
+      "title": "Internet",
+      "details": {
+        "subtitle": "Konektivitas Digital",
+        "content": [
+          "Jaringan internet fiber optik yang tidak stabil",
+          "WiFi gratis di balai desa",
+          "Kartu yang ada sinyal (lumayan) : ByU, Telkomsel, Indosat",
+          "Banyak warga yang sudah memiliki WiFi sendiri",
+          "Sinyal sulit di dapatkan di beberapa titik dusun, terutama di area yang sudah diatas"
+        ]
+      }
+    },
+    {
+      "icon": "Combine",
+      "title": "Kegiatan Rutinan Warga",
+      "details": {
+        "subtitle": "Kegiatan Rutinan Warga",
+        "content": [
+          "Pertemuan ibu-ibu PKK 2 kali dalam sebulan",
+          "Pertemuan pemuda 1 kali dalam sebulan",
+          "Pertemuan bapak-bapak 1 kali dalam sebulan",
+          "Pengajian ibu-ibu setiap rabu siang",
+          "Gotong royong warga setiap hari sabtu sore",
+          "Kegiatan Neklek setiap bulan suro"
+        ]
+      }
+    },
+    {
+      "icon": "OctagonAlert",
+      "title": "Masalah Umum",
+      "details": {
+        "subtitle": "Masalah yang sering dihadapi warga",
+        "content": [
+          "Akses air bersih yang terbatas terutama saat musim kemarau",
+          "Koneksi internet yang tidak stabil di beberapa area",
+          "Banyaknya warga yang mengalammi masalah pada hewan ternak dan tanaman baik itu lahan pertanian maupun tanaman di halaman rumah",
+          "Edukasi dan pelatihan mengenai pengolahan sampah yang masih kurang",
+          "Literasi digital yang masih rendah di kalangan warga"
+        ]
+      }
+    },
+    {
+      "icon": "ListCollapse",
+      "title": "Detail Lain",
+      "details": {
+        "subtitle": "Informasi Tambahan",
+        "content": [
+          "Dusun Mendak terletak di daerah perbukitan dengan ketinggian yang cukup tinggi",
+          "Mayoritas mata pencaharian warga adalah petani dan peternak",
+          "Jarak antara dusun dengan pasar tidak terlalu jauh, sekitar 2 km (pasar surowono)",
+          "Banyak tempat wisata alam yang dapat dikembangkan di sekitar dusun",
+          "Banyaknya kendaraan gol C yang melintas di jalan utama dusun karena aktivitas pertambangan pasir di sekitar",
+          "Suhu udara yang dingin, bisa hingga 13 derajat Celcius pada malam hari saat musim kemarau"
+        ]
+      }
+    }
+  ]
+}
+
