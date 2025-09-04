@@ -1,26 +1,46 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
+import {useEffect, useState} from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import galeriData from "../data/galeriData.json"
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../lib/firebaseConfig.js";
+import LoadingSpinner, { ImageSkeleton } from "./LoadingSpinner.js";
 
 export default function Galeri() {
-  const [showAll, setShowAll] = useState(false)
-  const [selectedImage, setSelectedImage] = useState(null)
+  const [showAll, setShowAll] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const images = galeriData.images
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const querySnapshot = await getDocs(collection(db, "galeri"));
+        const data = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        setImages(data[0].images);
+        console.log(data[0].images);
+      } catch (error) {
+        console.error("❌ Gagal fetch UMKM:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-  const initialDisplayCount = 6
-  const displayedImages = showAll ? images : images.slice(0, initialDisplayCount)
+    fetchData();
+  }, []);
+
+  const initialDisplayCount = 6;
+  const displayedImages = showAll ? images : images.slice(0, initialDisplayCount);
 
   const openModal = (image) => {
-    setSelectedImage(image)
-  }
+    setSelectedImage(image);
+  };
 
   const closeModal = () => {
-    setSelectedImage(null)
-  }
+    setSelectedImage(null);
+  };
 
   return (
     <section id="galeri" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
@@ -34,40 +54,44 @@ export default function Galeri() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayedImages.map((image, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-100 cursor-pointer"
-              onClick={() => openModal(image)}
-            >
-              {/* Image container */}
-              <div className="relative overflow-hidden">
-                <Image
-                  src={image.src || "/placeholder.svg"}
+        {loading ? (
+          <ImageSkeleton count={6} />
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {displayedImages.map((image, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-100 cursor-pointer"
+                onClick={() => openModal(image)}
+              >
+                {/* Image container */}
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={image.src || "/placeholder.svg"}
                     alt={image.alt || "Galeri Image"}
-                  width={400}
-                  height={300}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                    width={400}
+                    height={300}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
 
-                {/* Hover overlay with title and description */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
-                  <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h4 className="text-lg font-bold mb-2">{image.title}</h4>
-                    <p className="text-sm text-gray-200 leading-relaxed">{image.description}</p>
+                  {/* Hover overlay with title and description */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
+                    <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <h4 className="text-lg font-bold mb-2">{image.title}</h4>
+                      <p className="text-sm text-gray-200 leading-relaxed">{image.description}</p>
+                    </div>
                   </div>
-                </div>
 
-                {/* Decorative gradient border on hover */}
-                <div className="absolute inset-0 ring-2 ring-transparent group-hover:ring-blue-500/50 transition-all duration-300 rounded-lg"></div>
+                  {/* Decorative gradient border on hover */}
+                  <div className="absolute inset-0 ring-2 ring-transparent group-hover:ring-blue-500/50 transition-all duration-300 rounded-lg"></div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* Show More/Less Button */}
-        {images.length > initialDisplayCount && (
+        {images.length > initialDisplayCount && !loading && (
           <div className="text-center mt-12">
             <button
               onClick={() => setShowAll(!showAll)}
@@ -120,5 +144,5 @@ export default function Galeri() {
         </div>
       )}
     </section>
-  )
+  );
 }
