@@ -2,7 +2,7 @@
   "images": [
     {
       "id": 1,
-      "src": "/images/pkk.jpg",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/pkk.jpg",
       "alt": "Suasana Dusun Mendak",
       "title": "Pertemuan PKK",
       "description": "Kegiatan rutin PKK (Pemberdayaan Kesejahteraan Keluarga) yang dilaksanakan setiap bulan untuk meningkatkan keterampilan dan kesejahteraan ibu-ibu di Dusun Mendak",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "src": "/images/posbindu.PNG",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/posbindu.PNG",
       "alt": "Kegiatan Warga",
       "title": "Posbindu Dusun Mendak",
       "description": "Pos Pembinaan Terpadu (Posbindu) untuk memantau kesehatan warga, terutama lansia, dengan pemeriksaan rutin dan edukasi kesehatan",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "src": "/images/ibungaji.jpg",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/ibungaji.jpg",
       "alt": "Fasilitas Umum",
       "title": "Pengajian Ibu-Ibu",
       "description": "Kegiatan pengajian rutin yang diselenggarakan untuk meningkatkan keimanan dan mempererat silaturahmi antar warga",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "src": "/images/posyandu.jpg",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/posyandu.jpg",
       "alt": "Kegiatan Anak-anak",
       "title": "Posyandu Balita",
       "description": "Pos Pelayanan Terpadu untuk memantau pertumbuhan dan kesehatan balita serta memberikan imunisasi dan vitamin",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "src": "/images/pemuda.jpg",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/pemuda.jpg",
       "alt": "Jalan Dusun",
       "title": "Rapat Kumpul Pemuda",
       "description": "Pertemuan rutin pemuda dusun untuk membahas program-program pembangunan dan kegiatan kemasyarakatan",
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "src": "/images/mendaktulisan.JPG",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/mendaktulisan.JPG",
       "alt": "Pertanian",
       "title": "Penanda Dusun Mendak",
       "description": "Penanda Wilayah Dusun Mendak, terletak di area strategis yang mudah dilihat",
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "src": "/images/masjid.JPG",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/masjid.JPG",
       "alt": "Kegiatan Gotong Royong",
       "title": "Masjid Dusun Mendak",
       "description": "Masjid sebagai pusat kegiatan keagamaan dan spiritual warga Dusun Mendak",
@@ -58,7 +58,7 @@
     },
     {
       "id": 8,
-      "src": "/images/posronda1.JPG",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/posronda1.JPG",
       "alt": "Rapat RT",
       "title": "Pos Ronda",
       "description": "Pos ronda untuk menjaga keamanan dan ketertiban lingkungan Dusun Mendak",
@@ -66,7 +66,7 @@
     },
     {
       "id": 9,
-      "src": "/images/tembakau.JPG",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/tembakau.JPG",
       "alt": "Kegiatan Anak-anak",
       "title": "Perkebunan Tembakau",
       "description": "Perkebunan tembakau yang menjadi salah satu komoditas utama pertanian di Dusun Mendak",
@@ -74,7 +74,7 @@
     },
     {
       "id": 10,
-      "src": "/images/pisang.jpg",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/pisang.jpg",
       "alt": "Panen Cabai",
       "title": "Perkebunan Pisang",
       "description": "Perkebunan pisang yang menjadi salah satu mata pencaharian warga Dusun Mendak",
@@ -82,7 +82,7 @@
     },
     {
       "id": 11,
-      "src": "/images/tegal.JPG",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/tegal.JPG",
       "alt": "Ternak Warga",
       "title": "Tegal Pertanian",
       "description": "Lahan pertanian yang subur menjadi tulang punggung ekonomi masyarakat Dusun Mendak",
@@ -90,7 +90,7 @@
     },
     {
       "id": 12,
-      "src": "/images/jembatanboyolali.JPG",
+      "src": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/jembatanboyolali.JPG",
       "alt": "Jalan Dusun",
       "title": "Jembatan Boyolali",
       "description": "Jembatan yang menghubungkan Dusun Mendak dengan wilayah sekitar untuk memudahkan mobilitas warga",
@@ -98,4 +98,3 @@
     }
   ]
 }
-

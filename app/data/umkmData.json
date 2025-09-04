@@ -5,7 +5,7 @@
       "name": "Nasi Goreng / Angkringan Mendak",
       "category": "kuliner",
       "description": "Angkringan dengan menu masakan tradisional Jawa dan berbagai menu yang lainnya",
-      "image": "/images/nasigoreng.JPG",
+      "image": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/nasigoreng.JPG",
       "specialties": ["Gudeg", "Soto Ayam", "Nasi Pecel"]
     },
     {
@@ -13,7 +13,7 @@
       "name": "Swalayan D'Mart",
       "category": "retail",
       "description": "Toko swalayan lengkap dengan berbagai kebutuhan sehari-hari warga dusun",
-      "image": "/images/demart.JPG",
+      "image": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/demart.JPG",
       "specialties": ["Sembako", "Alat Tulis", "Obat-obatan"]
     },
     {
@@ -21,7 +21,7 @@
       "name": "Batu Alam",
       "category": "kerajinan",
       "description": "Kerajinan tangan dari batu alam seperti bata rumah, pondasi, dan batu hias",
-      "image": "/images/placeholder.jpg",
+      "image": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/placeholder.jpg",
       "specialties": ["Batako", "Batu Alam", "Batu Hias"]
     },
     {
@@ -29,7 +29,7 @@
       "name": "Jasa Rental / Sewa Mobil",
       "category": "jasa",
       "description": "Rental mobil untuk kebutuhan transportasi warga dusun dan sekitarnya",
-      "image": "/images/sewa.JPG",
+      "image": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/sewa.JPG",
       "specialties": ["Rental Mobil"]
     },
     {
@@ -37,7 +37,7 @@
       "name": "Jamu Tradisional",
       "category": "kuliner",
       "description": "UMKM jamu tradisional dengan berbagai ramuan herbal untuk kesehatan",
-      "image": "/images/jamu.JPG",
+      "image": "https://uhoigatfiqbqftztlpiv.supabase.co/storage/v1/object/public/mendak/jamu.JPG",
       "specialties": ["Jamu"]
     },
     {

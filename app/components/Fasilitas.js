@@ -1,13 +1,33 @@
 "use client"
 
 import { School, Combine, Heart, Zap, Droplets, Car, Wifi, X, UserCog, Sprout, Building2, OctagonAlert, ListCollapse } from "lucide-react"
-import { useState } from "react"
+import {useEffect, useState} from "react"
 import detail from "../data/detailData.json"
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../lib/firebaseConfig.js";
+import LoadingSpinner, { CardSkeleton } from "./LoadingSpinner.js";
 
 export default function Fasilitas() {
   const [selectedFacility, setSelectedFacility] = useState(null)
+  const [facilities, setFasilitasData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const facilities = detail.data
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const querySnapshot = await getDocs(collection(db, "detail"));
+        const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setFasilitasData(data[0].data);
+        console.log(data[0].data);
+      } catch (error) {
+        console.error("❌ Gagal fetch UMKM:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   // Icon mapping untuk mengkonversi string ke komponen React
   const iconMap = {
@@ -43,7 +63,10 @@ export default function Fasilitas() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8">
+        {loading ? (
+            <CardSkeleton count={8} />
+        ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {facilities.map((facility, index) => (
             <div
               key={index}
@@ -64,6 +87,7 @@ export default function Fasilitas() {
             </div>
           ))}
         </div>
+        )}
       </div>
 
       {/* Modal */}
